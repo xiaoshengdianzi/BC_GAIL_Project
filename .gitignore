@@ -171,11 +171,12 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# 强化学习 权重文件（不上传）
+# 强化学习 权重文件和数据文件（不上传）
 *.pth
 *.pt
 *.pkl
 *.h5
+*.npz
 checkpoints/
 logs/
 
