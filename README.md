@@ -26,6 +26,23 @@ Or from the requirements.txt file:
 pip install -r requirements.txt
 ```
 
+## Usage
+
+### Train Expert Policy with PPO
+```bash
+python train_expert_ppo.py --sample_episodes 1 --n_samples 30
+```
+
+### Train Behavioral Cloning (BC)
+```bash
+python train_bc.py
+```
+
+### Train Generative Adversarial Imitation Learning (GAIL)
+```bash
+python train_gail.py
+```
+
 ## Project Structure
 
 ```
@@ -64,23 +81,6 @@ A simple approach that directly learns a policy from expert demonstrations using
 
 ### 3. Generative Adversarial Imitation Learning (GAIL)
 Uses a GAN framework to learn from expert demonstrations without explicitly specifying a reward function.
-
-## Usage
-
-### Train Expert Policy with PPO
-```bash
-python train_expert_ppo.py --sample_episodes 1 --n_samples 30
-```
-
-### Train Behavioral Cloning (BC)
-```bash
-python train_bc.py
-```
-
-### Train Generative Adversarial Imitation Learning (GAIL)
-```bash
-python train_gail.py
-```
 
 ## License
 
