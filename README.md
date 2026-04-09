@@ -4,6 +4,10 @@
   <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20imitation%20learning%20ai%20robot%20training%20neural%20network%20visualization&image_size=square_hd" alt="Imitation Learning" width="400">
 </div>
 
+<div align="center">
+  <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=imitation%20learning%20behavioral%20cloning%20framework%20diagram%20expert%20demonstrations%20policy%20network%20supervised%20learning&image_size=landscape_16_9" alt="Imitation Learning Framework" width="600">
+</div>
+
 ## Quick Start
 
 ### Clone the Repository
