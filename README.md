@@ -14,8 +14,16 @@ git clone https://github.com/xiaoshengdianzi/BC_GAIL_Project.git
 
 ### Install Dependencies
 
+You can install dependencies directly:
+
 ```bash
 pip install torch numpy tqdm matplotlib gymnasium
+```
+
+Or from the requirements.txt file:
+
+```bash
+pip install -r requirements.txt
 ```
 
 ## Overview
