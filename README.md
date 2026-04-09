@@ -4,6 +4,23 @@
   <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=imitation%20learning%20reinforcement%20learning%20AI%20robot%20learning&image_size=square_hd" alt="Imitation Learning" width="400">
 </div>
 
+## Quick Start
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/xiaoshengdianzi/BC_GAIL_Project.git
+cd BC_GAIL_Project
+```
+
+### Install Dependencies
+
+```bash
+pip install torch numpy tqdm matplotlib gymnasium
+```
+
+If you use gym (older installs), replace gymnasium with gym.
+
 ## Overview
 
 This repository provides a comprehensive implementation of various imitation learning algorithms in PyTorch, including Behavioral Cloning (BC) and Generative Adversarial Imitation Learning (GAIL). It also includes expert policy training using Proximal Policy Optimization (PPO) to generate high-quality demonstration data.
@@ -12,10 +29,11 @@ The project is designed to serve as both an educational resource and a practical
 
 ## Table of Contents
 
+- [Quick Start](#quick-start)
 - [Overview](#overview)
 - [Environment Requirements](#environment-requirements)
 - [Installation](#installation)
-- [Quick Start](#quick-start)
+- [Training Guide](#training-guide)
 - [Algorithms](#algorithms)
 - [Usage](#usage)
 - [Results](#results)
@@ -43,7 +61,7 @@ pip install torch numpy tqdm matplotlib gymnasium
 
 ### From Source
 
-1. Clone the repository:
+1. Clone the repository (if not already done):
    ```bash
    git clone https://github.com/xiaoshengdianzi/BC_GAIL_Project.git
    cd BC_GAIL_Project
