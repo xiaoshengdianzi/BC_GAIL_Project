@@ -85,3 +85,9 @@ Uses a GAN framework to learn from expert demonstrations without explicitly spec
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Related Blog
+
+For more details about this project, please visit the blog post:
+
+[Imitation Learning Implementation: BC and GAIL](https://blog.csdn.net/m0_66676819/article/details/159978263?sharetype=blogdetail&sharerId=159978263&sharerefer=PC&sharesource=m0_66676819&spm=1011.2480.3001.8118)
