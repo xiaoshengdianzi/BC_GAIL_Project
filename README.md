@@ -66,23 +66,22 @@ pip install torch numpy tqdm matplotlib gymnasium
    git clone https://github.com/xiaoshengdianzi/BC_GAIL_Project.git
    cd BC_GAIL_Project
    ```
-
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
-   ```
 
-## Quick Start
+## Training Guide
 
 Follow these steps to train and evaluate the imitation learning algorithms:
 
 ### 1. Train Expert Policy with PPO
 
 ```bash
-python train_expert_ppo.py --sample_episodes 1 --n_samples 30 --output_npz expert_data_cartpole.npz
+python train_expert_ppo.py --sample_episodes 1 --n_samples 30
 ```
 
 This will:
+
 - Train a PPO expert policy on CartPole-v0
 - Generate expert demonstration data
 - Save the trained policy weights and demonstration data
@@ -94,6 +93,7 @@ python train_bc.py
 ```
 
 This will:
+
 - Load the expert demonstration data
 - Train a BC policy using supervised learning
 - Evaluate the trained policy
@@ -106,6 +106,7 @@ python train_gail.py
 ```
 
 This will:
+
 - Load the expert demonstration data
 - Train a GAIL policy using adversarial learning
 - Evaluate the trained policy
@@ -118,6 +119,7 @@ This will:
 PPO is used to train expert policies that generate high-quality demonstration data. It implements the clipped objective function to ensure stable policy updates.
 
 **Key features:**
+
 - Clipped surrogate objective for stable training
 - Multiple epochs of mini-batch updates
 - Advantage function estimation with GAE (Generalized Advantage Estimation)
@@ -127,6 +129,7 @@ PPO is used to train expert policies that generate high-quality demonstration da
 BC is a simple yet effective imitation learning approach that directly learns a policy from expert demonstrations using supervised learning.
 
 **Key features:**
+
 - Direct supervised learning from expert trajectories
 - Simple and computationally efficient
 - Suitable for quick policy learning when expert data is available
@@ -136,6 +139,7 @@ BC is a simple yet effective imitation learning approach that directly learns a 
 GAIL uses a generative adversarial network (GAN) framework to learn from expert demonstrations without explicitly specifying a reward function.
 
 **Key features:**
+
 - Adversarial training between policy (generator) and discriminator
 - Learns implicit reward function from expert behavior
 - Typically achieves better performance than BC
@@ -149,7 +153,7 @@ GAIL uses a generative adversarial network (GAN) framework to learn from expert 
 python train_expert_ppo.py --n_samples 30
 
 # Train expert PPO policy and generate 300 samples
-python train_expert_ppo.py --n_samples 300 --output_npz expert_data_300.npz
+python train_expert_ppo.py --n_samples 300
 ```
 
 ### Behavioral Cloning
@@ -176,24 +180,31 @@ python train_gail.py --learning_rate 3e-4 --epochs 50
 
 The following files are generated during training:
 
-| File | Description |
-|------|-------------|
+| File                            | Description                       |
+| ------------------------------- | --------------------------------- |
 | `expert_actor_ppo_cartpole.pth` | Trained expert PPO policy weights |
-| `bc_policy_cartpole.pth` | Trained BC policy weights |
-| `gail_policy_actor.pth` | Trained GAIL policy weights |
-| `bc_returns_curve.png` | BC training returns curve |
-| `gail_returns_curve.png` | GAIL training returns curve |
-| `expert_data_*.npz` | Expert demonstration data files |
+| `bc_policy_cartpole.pth`        | Trained BC policy weights         |
+| `gail_policy_actor.pth`         | Trained GAIL policy weights       |
+| `bc_returns_curve.png`          | BC training returns curve         |
+| `gail_returns_curve.png`        | GAIL training returns curve       |
 
-### Training Curves
+### Visual Results
 
-#### BC Training Curve
+#### Training Curves
 
-![BC Training Curve](bc_returns_curve.png)
+<div align="center">
+  <h4>BC Training Curve</h4>
+  <img src="bc_returns_curve.png" alt="BC Training Curve" width="600">
 
-#### GAIL Training Curve
+  <h4>GAIL Training Curve</h4>
+  <img src="gail_returns_curve.png" alt="GAIL Training Curve" width="600">
+</div>
 
-![GAIL Training Curve](gail_returns_curve.png)
+#### Algorithm Comparison
+
+<div align="center">
+  <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=comparison%20of%20imitation%20learning%20algorithms%20BC%20vs%20GAIL%20performance%20curves&image_size=landscape_16_9" alt="Algorithm Comparison" width="800">
+</div>
 
 ## Project Structure
 
@@ -210,6 +221,7 @@ The following files are generated during training:
 ## Hyperparameters
 
 ### PPO Expert Training
+
 - `actor_lr`: 1e-3 (actor network learning rate)
 - `critic_lr`: 1e-2 (critic network learning rate)
 - `hidden_dim`: 128 (network hidden layer dimension)
@@ -219,11 +231,13 @@ The following files are generated during training:
 - `eps`: 0.2 (clipping epsilon)
 
 ### Behavioral Cloning
+
 - `learning_rate`: 1e-3 (learning rate)
 - `batch_size`: 64 (batch size)
 - `epochs`: 50 (number of training epochs)
 
 ### GAIL
+
 - `actor_lr`: 3e-4 (actor learning rate)
 - `critic_lr`: 1e-3 (critic learning rate)
 - `discriminator_lr`: 3e-4 (discriminator learning rate)
