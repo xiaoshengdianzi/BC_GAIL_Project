@@ -26,6 +26,30 @@ Or from the requirements.txt file:
 pip install -r requirements.txt
 ```
 
+## Project Structure
+
+```
+├── train_expert_ppo.py   # PPO expert policy training
+├── train_bc.py           # Behavioral Cloning implementation
+├── train_gail.py         # GAIL implementation
+├── rl_utils.py           # Reinforcement learning utilities
+├── requirements.txt      # Dependencies
+├── LICENSE               # MIT License
+└── README.md             # This documentation
+```
+
+## Results
+
+### Training Curves
+
+<div align="center">
+  <h4>BC Training Curve</h4>
+  <img src="bc_returns_curve.png" alt="BC Training Curve" width="500">
+
+  <h4>GAIL Training Curve</h4>
+  <img src="gail_returns_curve.png" alt="GAIL Training Curve" width="500">
+</div>
+
 ## Overview
 
 This repository provides implementations of imitation learning algorithms in PyTorch, including Behavioral Cloning (BC) and Generative Adversarial Imitation Learning (GAIL), with expert policy training using Proximal Policy Optimization (PPO).
@@ -57,30 +81,6 @@ python train_bc.py
 ```bash
 python train_gail.py
 ```
-
-## Project Structure
-
-```
-├── train_expert_ppo.py   # PPO expert policy training
-├── train_bc.py           # Behavioral Cloning implementation
-├── train_gail.py         # GAIL implementation
-├── rl_utils.py           # Reinforcement learning utilities
-├── requirements.txt      # Dependencies
-├── LICENSE               # MIT License
-└── README.md             # This documentation
-```
-
-## Results
-
-### Training Curves
-
-<div align="center">
-  <h4>BC Training Curve</h4>
-  <img src="bc_returns_curve.png" alt="BC Training Curve" width="500">
-
-  <h4>GAIL Training Curve</h4>
-  <img src="gail_returns_curve.png" alt="GAIL Training Curve" width="500">
-</div>
 
 ## License
 
